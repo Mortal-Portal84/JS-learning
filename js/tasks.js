@@ -12,47 +12,44 @@ if (a == 10) {
 // 2. Если переменная a равна нулю, то выведите 'Верно', иначе выведите 'Неверно'. 
 // Проверьте работу скрипта при a равном 1, 0, -3.
 
-const a1 = 0;
+const a1 = 1;
 
 switch (a1) {
     case 1:
+        console.log('Верно');
+        break;
+    default:
         console.log('Неверно');
         break;
-    case 0:
-        console.log('Верно');
-        break;    
-    case -3:
-        console.log('Неверно');
-        break;                 
-    }
+}
 
 //3. Если переменная test равна true, то выведите 'Верно', иначе выведите 'Неверно'.
 
 let test = true;
 
-(test === true) ? console.log('Верно') : console.log('Неверно');
-(test === false) ? console.log('Верно') : console.log('Неверно');
+(test === true) ? console.log('Верно'): console.log('Неверно');
+(test === false) ? console.log('Верно'): console.log('Неверно');
 
 let test = true;
 
-console.log(test=== true ? 'Верно' : 'Неверно');
-console.log(test=== false ? 'Верно' : 'Неверно');
+console.log(test === true ? 'Верно' : 'Неверно');
+console.log(test === false ? 'Верно' : 'Неверно');
 
 //4. 4. В переменной min лежит число от 0 до 59. Определите в какую четверть часа 
 // попадает это число (в первую, вторую, третью или четвертую).
 
 let min = 10;
 if (min >= 0 && min <= 14) {
-	console.log('В первую четверть.');
+    console.log('В первую четверть.');
 }
 if (min >= 15 && min <= 30) {
-	console.log('Во вторую четверть.');
+    console.log('Во вторую четверть.');
 }
 if (min >= 31 && min <= 45) {
-	console.log('В третью четверть.');
+    console.log('В третью четверть.');
 }
 if (min >= 46 && min <= 59) {
-	console.log('В четвертую четверть.');
+    console.log('В четвертую четверть.');
 }
 
 // 5. Переменная num может принимать 4 значения: 1, 2, 3 или 4. Если она имеет значение '1', то в переменную result запишем 'зима',
@@ -66,14 +63,14 @@ switch (num) {
         break;
     case 2:
         console.log('Весна');
-        break;    
+        break;
     case 3:
         console.log('Осень');
         break;
     case 3:
         console.log('Лето');
-        break;                 
-    }
+        break;
+}
 
 const result = num;
 
@@ -91,3 +88,56 @@ if (month === 12 || month <= 2) {
 } else if (month >= 9 && month <= 11) {
     console.log('Осень');
 }
+
+// 7. В переменной day лежит какое-то число из интервала от 1 до 31. Определите,
+// в какую декаду месяца попадает это число (в первую, вторую или третью)
+
+var day = 32;
+
+if (day >= 1 && day <= 10) {
+    console.log('Первая');
+} else if (day >= 11 && day <= 20) {
+    console.log('Вторая');
+} else if (day >= 21 && day <= 31) {
+    console.log('Третья');
+} else {
+    console.log('Хрен ты угадал =)');
+}
+
+// 8. В начале программы задается число. Определить, является ли оно простым.
+
+let numb = 31;
+let flag = true;
+
+for (let i = 2; i < numb; i++) {
+	if (numb % i == 0) {
+		flag = false;
+		break; 
+	}
+}
+
+// 9. Нарисовать в консоли треугольник со стороной заданной длины. Длина
+// задаётся переменной в начале программы. Пример: let length = 5;
+
+let len = 5;
+        
+for (let i = 1; i < 6; i++) {
+    if (i == 1) {
+        console.log('*****'); 
+    } else if (i == 2) {
+        console.log('****'); 
+        } else if (i == 3) {
+            console.log('***'); 
+            } else if (i == 4) {
+                console.log('**'); 
+                } else if (i == 5) {
+                    console.log('*'); 
+                    }
+}
+
+let star = '*';
+for (let i = 0; i < 5; i++) {
+    
+}
+
+console.log('Hello' + ' World');
