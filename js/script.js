@@ -1,34 +1,46 @@
-"use strict";
+'use strict';
 
-const numberOfFilms = +prompt('Сколько фильмов вы уже посмотрели', '');
+const numberOfFilms = +prompt('Сколько фильмов вы уже просмотрели?', '');
 
-const personalMovieDb = {
+const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
     actors: {},
     genres: [],
-    privat: false
+    private: false
 };
 
 for (let i = 0; i < 2; i++) {
-    const a = prompt('Один из последних просмотренных фильмов', ''),
-          b = +prompt('Сколько фильмов вы уже посмотрели', '');
+    const q1 = prompt('Один из последних просмотренных фильмов?', '');
+    const q2 = +prompt('На сколько оцените его?', '');
 
-      if (a != null && a != null && b != '' && b != '' && a.length < 50) {
-          personalMovieDb.movies[a] = b;
-          console.log('done'); 
-      } else {
-          console.log('error');
-          i--;
-      }         
+    if (q1 != null && q2 != null && q1 != '' && q2 != "" && q1.length < 50) {
+        personalMovieDB.movies[q1] = q2;
+        console.log('good');    
+    } else {
+        console.log('badluck...');
+        i--;
+    }
 }
 
-if (personalMovieDb.count < 10) {
-    console.log('Просмотрено довольно мало фильмов');
-} else if (personalMovieDb.count >= 10 && personalMovieDb.count <= 30) {
-    console.log('Вы классический зритель');
-} else if (personalMovieDb.count >= 30) {
-    console.log('Вы киноман');
-} else {
-    console.log('Произошла ошибка');
-}
+// for (let i = 0; i < 2; i++) {
+//     const q1 = prompt('Один из последних просмотренных фильмов?', '');
+//     const q2 = +prompt('На сколько оцените его?', '');
+
+//     if (q1 == null && q2 == null && q1 == '' && q2 == "") {
+//         console.log('error');
+//         personalMovieDB.movies[q1] = q2;
+//         i--;            
+//     } else {        
+//         console.log('good');                
+//     }
+    
+    if (numberOfFilms < 10) {
+        console.log('Просмотрено довольно мало фильмов');
+    } else if (numberOfFilms > 10 && numberOfFilms < 30) {
+        console.log('Вы классический зритель');
+    } else if ( numberOfFilms > 30) {
+        console.log('Вы киноман');
+    }
+
+console.log(personalMovieDB);

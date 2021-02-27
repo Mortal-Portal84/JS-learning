@@ -135,9 +135,25 @@ for (let i = 1; i < 6; i++) {
                     }
 }
 
-let star = '*';
-for (let i = 0; i < 5; i++) {
-    
+const star = '*';
+const lengh = 5;
+
+for (let i = 0; i < lengh; i++) {
+    let tmp = '';
+
+    for (let j = 0; j < lengh - i; j++) {
+        tmp = tmp + star;
+    }
+
+    console.log(tmp);
 }
 
-console.log('Hello' + ' World');
+//10. Конвертер валют
+const dollar = +prompt('Сколько баксов ты хочешь разменять на белорусские?', '');
+const byn = 2.60;
+let summ = function() {
+    return (dollar * byn);
+};
+
+alert('Ты получишь ' + summ(dollar, byn) + ' BYN') ;
+console.log(summ(dollar, byn));
