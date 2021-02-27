@@ -6,13 +6,13 @@
 
 const valueUSD = +prompt('Сколько баксов ты хочешь разменять на белорусские?', '');
 const rate = 2.60;
-let convertToByn = function () {
+let convertToByn = function (valueUSD, rate) {
     return (valueUSD * rate);
 };
 const summ = 'Ты получишь ' + convertToByn(valueUSD, rate) + ' BYN';
 
 if (convertToByn(valueUSD, rate) < 400) {
-    alert(summ + ', ты тут долго не протяннешь...');
+    alert(summ + ', но, ты тут долго не протяннешь...');
     console.log(summ);
 } else if (convertToByn(valueUSD, rate) > 400 && convertToByn(valueUSD, rate) < 900) {
     alert(summ + ', ну так себе, гульнуть можно');
