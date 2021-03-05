@@ -27,13 +27,13 @@ switch (a1) {
 
 let test = true;
 
-(test === true) ? console.log('Верно'): console.log('Неверно');
+(test === true) ? console.log('Верно'): console.log('Неверно'),
 (test === false) ? console.log('Верно'): console.log('Неверно');
 
-let test = true;
+let test1 = true;
 
-console.log(test === true ? 'Верно' : 'Неверно');
-console.log(test === false ? 'Верно' : 'Неверно');
+console.log(test1 === true ? 'Верно' : 'Неверно');
+console.log(test1 === false ? 'Верно' : 'Неверно');
 
 //4. 4. В переменной min лежит число от 0 до 59. Определите в какую четверть часа 
 // попадает это число (в первую, вторую, третью или четвертую).
