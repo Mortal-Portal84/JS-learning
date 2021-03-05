@@ -70,12 +70,54 @@ if (rate[currency]) {
     console.log("Произошла ошибка!");
 }
 
-const fruit = 'Some orange apple ';
+// const fruit = 'Some orange apple ';
 
-console.log(fruit.indexOf('orange'));
+// console.log(fruit.indexOf('orange'));
 
 // console.log(fruit.slice(5, 11));
 
 // console.log(fruit.substring(5, 10));
 
-console.log(fruit.substr(5, 4));
+// console.log(fruit.substr(5, 4));
+
+// 1.  Отгадай число. запросить загадываемое число. запрашивать отгадываемое число до тех пор,пока оно не совпадет.
+// выводить 'больше', если юзер ввел значение меньше загаданного, 'меньше' - если наоборот. 'верно' при совпадении.
+
+const number = 666;
+
+const question = +prompt('Угадаешь число? =)', '');
+
+if (question < number) {
+    alert('Не, оно больше на самомо деле...');
+    console.log('Не, оно больше на самомо деле...');
+} else if (question > number) {
+    alert('Многовато...');
+    console.log('Многовато...');
+} else if (question === number) {
+    alert('Правильно, да ты красавчик!');
+    console.log('Всё ОК!');
+} else {
+    alert('Введена какая-то чепуха... Просто введи число');
+    console.log('Ошибка! Попробуй ещё раз!');
+}
+
+for (let i = 0; i < 1; i++) {
+    const number = 666;
+    const question = +prompt('Угадаешь число? =)', '');
+
+    if (question < number) {
+        alert('Не, оно больше на самомо деле...');
+        console.log('Не, оно больше на самомо деле...');
+        i--;
+    } else if (question > number) {
+        alert('Многовато...');
+        console.log('Многовато...');
+        i--;
+    } else if (question === number) {
+        alert('Правильно, да ты красавчик!');
+        console.log('Всё ОК!');
+    }   else {
+        console.log('badluck...');
+        i--;
+    }
+}

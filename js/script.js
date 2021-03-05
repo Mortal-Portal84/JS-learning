@@ -22,18 +22,6 @@ for (let i = 0; i < 2; i++) {
         i--;
     }
 }
-
-// for (let i = 0; i < 2; i++) {
-//     const q1 = prompt('Один из последних просмотренных фильмов?', '');
-//     const q2 = +prompt('На сколько оцените его?', '');
-
-//     if (q1 == null && q2 == null && q1 == '' && q2 == "") {
-//         console.log('error');
-//         personalMovieDB.movies[q1] = q2;
-//         i--;            
-//     } else {        
-//         console.log('good');                
-//     }
     
     if (numberOfFilms < 10) {
         console.log('Просмотрено довольно мало фильмов');
